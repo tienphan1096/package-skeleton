@@ -88,7 +88,7 @@
                             "",
                             () => {
                                 ProcessMaker.apiClient
-                                    .delete("admin/package-skeleton/" + data.id)
+                                    .delete("admin/my-first-package/" + data.id)
                                     .then(response => {
                                         ProcessMaker.alert("Sample " + data.name + " has been deleted", "warning");
                                         this.$emit("reload");
@@ -105,7 +105,7 @@
                 // Load from our api client
                 ProcessMaker.apiClient
                     .get(
-                        "admin/package-skeleton/fetch?page=" +
+                        "admin/my-first-package/fetch?page=" +
                         this.page +
                         "&per_page=" +
                         this.perPage +

@@ -1,6 +1,6 @@
 <?php
 use Illuminate\Support\Facades\Schema;
-Artisan::command('package-skeleton:install', function () {
+Artisan::command('my-first-package:install', function () {
     if (!Schema::hasTable('sample_skeleton')) {
         Schema::create('sample_skeleton', function (Illuminate\Database\Schema\Blueprint $table) {
             $table->increments('id');
@@ -10,11 +10,11 @@ Artisan::command('package-skeleton:install', function () {
         });
     }
     Artisan::call('vendor:publish', [
-        '--tag' => 'package-skeleton',
+        '--tag' => 'my-first-package',
         '--force' => true
     ]);
 
-    $this->info('Package Skeleton has been installed');
+    $this->info('My First Package has been installed');
 })->describe('Installs the required js files and table in DB');
 
 
